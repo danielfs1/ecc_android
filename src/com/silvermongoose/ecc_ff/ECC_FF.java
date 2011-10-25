@@ -138,7 +138,6 @@ public class ECC_FF extends Activity {
         	login_button = (Button) dialog.findViewById(R.id.loginButton);
         	login_button.setOnClickListener(new OnClickListener() {
 				
-				@Override
 				public void onClick(View v) {
 					String password = (String) password_field.getText().toString();
 					Log.v("test", "----------------------------" + password);
@@ -238,27 +237,22 @@ public class ECC_FF extends Activity {
     		data = data_in;
     	}
     	
-		@Override
 		public int getCount() {
 			return data.size();
 		}
 
-		@Override
 		public Object getItem(int position) {
 			return data.get(position);
 		}
 
-		@Override
 		public long getItemId(int position) {
 			return position;
 		}
 
-		@Override
 		public int getItemViewType(int position) {
 			return android.R.layout.simple_spinner_dropdown_item;
 		}
 
-		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
             TextView v = new TextView(getApplicationContext());
             v.setTextColor(Color.BLACK);
@@ -266,34 +260,28 @@ public class ECC_FF extends Activity {
             return v;
         }
 
-		@Override
 		public int getViewTypeCount() {
 			return android.R.layout.simple_spinner_dropdown_item;
 		}
 
-		@Override
 		public boolean hasStableIds() {
 			return false;
 		}
 
-		@Override
 		public boolean isEmpty() {
 			return false;
 		}
 
-		@Override
 		public void registerDataSetObserver(DataSetObserver observer) {
 			// TODO Auto-generated method stub
 			
 		}
 
-		@Override
 		public void unregisterDataSetObserver(DataSetObserver observer) {
 			// TODO Auto-generated method stub
 			
 		}
 
-		@Override
 		public View getDropDownView(int position, View convertView, ViewGroup parent) 
 		{
 		  if (convertView == null)
